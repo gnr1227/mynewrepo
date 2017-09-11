@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-I have added new line
-size_t my_strlen(char *s)
+size_t my_strlen(const char *s)
 {
    char *p = s;
 
@@ -14,7 +13,7 @@ size_t my_strlen(char *s)
 int main(void)
 {
    int i;
-   char *s[] = 
+   const char *s[] = 
    {
       "Git tutorials",
       "Tutorials Point"
