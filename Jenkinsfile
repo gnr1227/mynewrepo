@@ -10,7 +10,7 @@ pipeline {
 
     stage('snyk check') {
       steps {
-        snykSecurity(snykInstallation: 'snyk', targetFile: 'go.mod', snykTokenId: 'snyk')
+        sh '/var/jenkins_home/snyk monitor --file=go.mod --token=$SNYK_TOKEN'
       }
     }
 
